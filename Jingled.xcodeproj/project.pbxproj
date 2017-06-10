@@ -15,6 +15,7 @@
 		4958B0F41EEBB411002B40EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4958B0F21EEBB411002B40EF /* LaunchScreen.storyboard */; };
 		4958B0FF1EEBB411002B40EF /* JingledTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4958B0FE1EEBB411002B40EF /* JingledTests.swift */; };
 		4958B10A1EEBB411002B40EF /* JingledUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4958B1091EEBB411002B40EF /* JingledUITests.swift */; };
+		4958B11B1EEBB75F002B40EF /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4958B11A1EEBB75F002B40EF /* Drink.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		4958B1051EEBB411002B40EF /* JingledUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JingledUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4958B1091EEBB411002B40EF /* JingledUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JingledUITests.swift; sourceTree = "<group>"; };
 		4958B10B1EEBB411002B40EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4958B11A1EEBB75F002B40EF /* Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +101,10 @@
 		4958B0E51EEBB411002B40EF /* Jingled */ = {
 			isa = PBXGroup;
 			children = (
+				4958B1191EEBB728002B40EF /* Controller */,
+				4958B1181EEBB722002B40EF /* View */,
+				4958B1171EEBB717002B40EF /* Model */,
 				4958B0E61EEBB411002B40EF /* AppDelegate.swift */,
-				4958B0E81EEBB411002B40EF /* ViewController.swift */,
 				4958B0EA1EEBB411002B40EF /* Main.storyboard */,
 				4958B0F01EEBB411002B40EF /* Assets.xcassets */,
 				4958B0F21EEBB411002B40EF /* LaunchScreen.storyboard */,
@@ -126,6 +130,29 @@
 				4958B10B1EEBB411002B40EF /* Info.plist */,
 			);
 			path = JingledUITests;
+			sourceTree = "<group>";
+		};
+		4958B1171EEBB717002B40EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4958B11A1EEBB75F002B40EF /* Drink.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4958B1181EEBB722002B40EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4958B1191EEBB728002B40EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4958B0E81EEBB411002B40EF /* ViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +294,7 @@
 			files = (
 				4958B0E91EEBB411002B40EF /* ViewController.swift in Sources */,
 				4958B0EF1EEBB411002B40EF /* Jingled.xcdatamodeld in Sources */,
+				4958B11B1EEBB75F002B40EF /* Drink.swift in Sources */,
 				4958B0E71EEBB411002B40EF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
