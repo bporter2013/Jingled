@@ -29,8 +29,9 @@ class Drink {
         return alcoholMass
     }
     
-    var alcoholMass: Double {
-        return _alcoholMass
+    // A standard drink contains 10 grams of alcohol. Needed for other calculations
+    var numOfStandardDrinks: Double {
+        return _alcoholMass / 10
     }
     
 }

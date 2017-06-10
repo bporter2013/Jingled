@@ -16,6 +16,9 @@
 		4958B0FF1EEBB411002B40EF /* JingledTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4958B0FE1EEBB411002B40EF /* JingledTests.swift */; };
 		4958B10A1EEBB411002B40EF /* JingledUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4958B1091EEBB411002B40EF /* JingledUITests.swift */; };
 		4958B11B1EEBB75F002B40EF /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4958B11A1EEBB75F002B40EF /* Drink.swift */; };
+		49A0172D1EEC9CAD00AE2ABD /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0172C1EEC9CAD00AE2ABD /* Food.swift */; };
+		49A0172F1EEC9D2500AE2ABD /* DrinkInBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0172E1EEC9D2500AE2ABD /* DrinkInBody.swift */; };
+		49C51D2C1EEC4E2B007D9B0F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C51D2B1EEC4E2B007D9B0F /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		4958B1091EEBB411002B40EF /* JingledUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JingledUITests.swift; sourceTree = "<group>"; };
 		4958B10B1EEBB411002B40EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4958B11A1EEBB75F002B40EF /* Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		49A0172C1EEC9CAD00AE2ABD /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		49A0172E1EEC9D2500AE2ABD /* DrinkInBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkInBody.swift; sourceTree = "<group>"; };
+		49C51D2B1EEC4E2B007D9B0F /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +142,9 @@
 			isa = PBXGroup;
 			children = (
 				4958B11A1EEBB75F002B40EF /* Drink.swift */,
+				49C51D2B1EEC4E2B007D9B0F /* Person.swift */,
+				49A0172C1EEC9CAD00AE2ABD /* Food.swift */,
+				49A0172E1EEC9D2500AE2ABD /* DrinkInBody.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -292,10 +301,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49C51D2C1EEC4E2B007D9B0F /* Person.swift in Sources */,
 				4958B0E91EEBB411002B40EF /* ViewController.swift in Sources */,
 				4958B0EF1EEBB411002B40EF /* Jingled.xcdatamodeld in Sources */,
 				4958B11B1EEBB75F002B40EF /* Drink.swift in Sources */,
+				49A0172F1EEC9D2500AE2ABD /* DrinkInBody.swift in Sources */,
 				4958B0E71EEBB411002B40EF /* AppDelegate.swift in Sources */,
+				49A0172D1EEC9CAD00AE2ABD /* Food.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +560,7 @@
 				4958B1101EEBB412002B40EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4958B1111EEBB412002B40EF /* Build configuration list for PBXNativeTarget "JingledTests" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +569,7 @@
 				4958B1131EEBB412002B40EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4958B1141EEBB412002B40EF /* Build configuration list for PBXNativeTarget "JingledUITests" */ = {
 			isa = XCConfigurationList;
@@ -564,6 +578,7 @@
 				4958B1161EEBB412002B40EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
