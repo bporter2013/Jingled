@@ -28,18 +28,7 @@ class Person {
         updateBacOfBody(timeElapsed: 0.0)
     }
     
-    // Calcualtes BAC of a drink, timeElapsed is in minutes
-    private func calcualteBloodAlcoholContent(of alcohol: Double, timeElapsed: Double) -> Double{
-        let standardDrinks = alcohol
-        let percentWaterInBody = 0.806
-        let factor = 1.2 // Factor set used to calculate BAC
-        let metabolicConstant = 0.017 // Rate at which alcohol is metabolised by body
-        let drinkPeriod = timeElapsed
-        
-        let bloodAlcoholContent = (((percentWaterInBody * standardDrinks * factor)/(_weight * _bodyWaterConstant)) - (metabolicConstant * drinkPeriod))
-        
-        return bloodAlcoholContent
-    }
+    
     
     func updateBacOfBody(timeElapsed: Double) {
         for (var drink) in _drinksInBody {

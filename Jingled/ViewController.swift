@@ -11,12 +11,12 @@ import UIKit
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        let p1 = Person(gender: true, weight: 185)
-        let d1 = Drink(alcoholByVolume: 0.043, volumeOfDrink: 12)
-        p1.addAlcohol(of: d1)
-        p1.updateBacOfBody(timeElapsed: 60)
-        print(p1.bloodAlcoholContent)
+//        super.viewDidLoad()
+//        let p1 = Person(gender: true, weight: 185)
+//        let d1 = Drink(alcoholByVolume: 0.043, volumeOfDrink: 12)
+//        p1.addAlcohol(of: d1)
+//        p1.updateBacOfBody(timeElapsed: 60)
+//        print(p1.bloodAlcoholContent)
         /*
         let d2 = Drink(alcoholByVolume: 0.043, volumeOfDrink: 12)
         p1.addAlcohol(of: d2)
