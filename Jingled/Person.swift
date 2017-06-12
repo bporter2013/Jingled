@@ -21,6 +21,10 @@ class Person {
         _bodyWaterConstant = gender ? 0.58 : 0.49 // 0.58 for male. 0.49 for female
     }
     
+    
+    var bodyWaterConstant: Double { return _bodyWaterConstant }
+    var weight: Double { return _weight }
+    
     func addAlcohol(of drink: Drink, amountOfFoodBeforeDrinking: Double) {
         let standardDrinks = drink.numOfStandardDrinks
         let intialBAC = calcualteBloodAlcoholContent(of: standardDrinks, timeElapsed: 0.0)

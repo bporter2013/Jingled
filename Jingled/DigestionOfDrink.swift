@@ -9,7 +9,7 @@
 import Foundation
 
 // Will calculate digestion factor used for BAC content of one drink
-class InitialDigestion {
+class DigestionOfDrink {
     
     private var _timeLeftToDigest: Double!
     private var _digestionFactor: Double!
