@@ -11,19 +11,19 @@ import Foundation
 // Will calculate digestion factor used for BAC content of one drink
 class DigestionOfDrink {
     
-    private var _timeLeftToDigest: Double!
-    private var _digestionFactor: Double!
+    private var topValOfFactor: Double!
+    private var timeToDigest: Double!
+    private(set) var digestionFactor: Double!
     
     init(digestionTime: Double) {
-        _timeLeftToDigest = digestionTime
-        _digestionFactor = 1 / _timeLeftToDigest
+        topValOfFactor = 1.0
+        timeToDigest = digestionTime
+        digestionFactor = topValOfFactor / timeToDigest
     }
-   
-    var digestionFactor: Double { return _digestionFactor }
     
     // Updates digestionFactor. With minusing mintues since drink was inputted
     func updateDigestionFactor(timeElapsed: Double) {
-        _timeLeftToDigest = (_timeLeftToDigest - timeElapsed) < 1 ? 1 : _timeLeftToDigest - timeElapsed
-        _digestionFactor = 1 / _timeLeftToDigest
+        topValOfFactor = (topValOfFactor + timeElapsed) <= timeToDigest ? topValOfFactor + timeElapsed : timeToDigest
+        digestionFactor = topValOfFactor / timeToDigest
     }
 }

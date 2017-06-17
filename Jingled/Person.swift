@@ -9,58 +9,52 @@
 import Foundation
 
 class Person {
-    private let _gender: Bool! // True for male, False for Female
-    private let _weight: Double!
-    private let _bodyWaterConstant: Double!
-    private var _totalBac = 0.0 // BAC
-    private var _drinksInBody: [DrinkInBody] // Contains drinks still in system
+    
+    private let gender: Bool! // True for male, False for Female
+    private let weight: Double!
+    private let bodyWaterConstant: Double!
+    private(set) var totalBac = 0.0 // BAC
+    
+    private var currentStomachContents = CurrentStomachContents(initialDigestionTime: 30)
+    private var bacFromDrinks = [BACFromDrink]()
     
     init(gender: Bool, weight: Double) {
-        _gender = gender
-        _weight = weight * 0.453592 // Assumed to be taken in as pounds for US, converted to kilograms
-        _bodyWaterConstant = gender ? 0.58 : 0.49 // 0.58 for male. 0.49 for female
+        self.gender = gender
+        self.weight = weight * 0.453592 // Assumed to be taken in as pounds for US, converted to kilograms
+        self.bodyWaterConstant = gender ? 0.58 : 0.49 // 0.58 for male. 0.49 for female
     }
     
+    // If person eats food
+    func addFood(withDigestionTimeOf: Double) {
+        currentStomachContents.changeDigestionTime(to: withDigestionTimeOf)
+    }
     
-    var bodyWaterConstant: Double { return _bodyWaterConstant }
-    var weight: Double { return _weight }
-    
-    func addAlcohol(of drink: Drink, amountOfFoodBeforeDrinking: Double) {
+    // If person drinks alcohol
+    func addAlcohol(withVolumeOf: Double, andAlcoholContentOf: Double) {
+        let drink = Drink(alcoholByVolume: andAlcoholContentOf, volumeOfDrink: withVolumeOf)
         let standardDrinks = drink.numOfStandardDrinks
-        let intialBAC = calcualteBloodAlcoholContent(of: standardDrinks, timeElapsed: 0.0)
-        //_drinksInBody.append((intialBAC, 0.0, standardDrinks))
-        updateBacOfBody(timeElapsed: 0.0)
+        
+        let digestionOfDrink = DigestionOfDrink(digestionTime: currentStomachContents.digestionTime)
+        
+        let newBac = BACFromDrink(standardDrinks: standardDrinks, digestionOfDrink: digestionOfDrink, bodyWaterConstant: bodyWaterConstant, weight: weight)
+        
+        bacFromDrinks.append(newBac)
     }
     
     
     
-    func updateBacOfBody(timeElapsed: Double) {
-        for (var drink) in _drinksInBody {
-            drink.1 =  drink.1 + timeElapsed
-            let newBac = calcualteBloodAlcoholContent(of: drink.2, timeElapsed: drink.1)
-            drink.0 = newBac
+    func updateBody(timeElapsed: Double) {
+        currentStomachContents.updateInfo(timeElapsed: timeElapsed)
+        totalBac = 0.0
+        for bacOfDrink in bacFromDrinks {
+            bacOfDrink.updateInfo(timeElapsed: timeElapsed)
+            totalBac += bacOfDrink.currentBac
         }
-        //removeDrinksOutOfSystem()
-        calculateTotalBAC()
+        removeDrinksOutOfSystem()
     }
     
-    // Doesn't work yet
-//    private func removeDrinksOutOfSystem() {
-//        for i in 0..<_drinksInBody.count {
-//            print(i)
-//            _drinksInBody.remove(at: i)
-//        }
-//    }
-    
-    private func calculateTotalBAC() {
-        _totalBloodAlcoholContent = 0.0
-        for drink in _drinksInBody {
-            _totalBloodAlcoholContent += drink.0
-        }
-    }
-    
-    var bloodAlcoholContent: Double {
-        return _totalBloodAlcoholContent
+    private func removeDrinksOutOfSystem() {
+        bacFromDrinks = bacFromDrinks.filter({ $0.checkIfDrinkIsOutOfSystem() == false })
     }
     
 }

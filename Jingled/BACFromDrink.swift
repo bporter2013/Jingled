@@ -10,37 +10,44 @@ import Foundation
 
 // Calculates Bac given from a drink. Takes into account digestion and motablizing of alcohol
 class BACFromDrink {
-    let _standardDrinks: Double!
-    let _weightOfPerson: Double!
-    let _bodyWaterConstant: Double!
-    var _digestionFactor: Double!
-    var _currentBac = 0.0
-    var _timeElapsed = 0.0
+    private let standardDrinks: Double!
+    private let weightOfPerson: Double!
+    private let bodyWaterConstant: Double!
+    private var digestionOfDrink: DigestionOfDrink!
+    private var timeElapsed = 0.0
+    private(set) var currentBac: Double!
     
-    init(drink: Drink, digestionOfDrink: DigestionOfDrink, person: Person) {
-        _standardDrinks = drink.numOfStandardDrinks
-        _digestionFactor = digestionOfDrink.digestionFactor
-        _bodyWaterConstant = person.bodyWaterConstant
-        _weightOfPerson = person.weight
+    init(standardDrinks: Double, digestionOfDrink: DigestionOfDrink, bodyWaterConstant: Double, weight: Double) {
+        self.standardDrinks = standardDrinks
+        self.digestionOfDrink = digestionOfDrink
+        self.bodyWaterConstant = bodyWaterConstant
+        self.weightOfPerson = weight
+        calcualteBloodAlcoholContent(timeElapsed: 0.0) // set inital currentBac value
     }
     
-    var currentBac: Double { return _currentBac }
-    
-    func updatedInfo(digestionOfDrink: DigestionOfDrink) {
-        _digestionFactor = digestionOfDrink.digestionFactor
-        calcualteBloodAlcoholContent()
+    func updateInfo(timeElapsed: Double) {
+        self.timeElapsed += timeElapsed
+        self.digestionOfDrink.updateDigestionFactor(timeElapsed: self.timeElapsed)
+        calcualteBloodAlcoholContent(timeElapsed: self.timeElapsed)
     }
     
     // Calcualtes current BAC of a drink
-    private func calcualteBloodAlcoholContent() {
-        let standardDrinks = _standardDrinks * _digestionFactor
+    private func calcualteBloodAlcoholContent(timeElapsed: Double) {
         let percentWaterInBody = 0.806
         let factor = 1.2 // Factor set used to calculate BAC
         let metabolicConstant = 0.017 // Rate at which alcohol is metabolised by body
-        _timeElapsed += 1.0
+        self.timeElapsed += timeElapsed
         
-        _currentBac = (((percentWaterInBody * standardDrinks * factor)/(_weightOfPerson * _bodyWaterConstant)) - (metabolicConstant * _timeElapsed))
+        currentBac = (((percentWaterInBody * standardDrinks * factor)/(weightOfPerson * bodyWaterConstant)) - (metabolicConstant * (timeElapsed / 60))) * digestionOfDrink.digestionFactor
         
-        if _currentBac < 0.0 { _currentBac = 0.0 }
+        if currentBac < 0.0 { currentBac = 0.0 }
+    }
+    
+    func checkIfDrinkIsOutOfSystem() -> Bool {
+        if (currentBac == 0.0 && digestionOfDrink.digestionFactor == 1) {
+            return true
+        } else {
+            return false
+        }
     }
 }
