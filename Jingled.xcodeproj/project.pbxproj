@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4958B0E71EEBB411002B40EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4958B0E61EEBB411002B40EF /* AppDelegate.swift */; };
-		4958B0E91EEBB411002B40EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4958B0E81EEBB411002B40EF /* ViewController.swift */; };
+		4958B0E91EEBB411002B40EF /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4958B0E81EEBB411002B40EF /* MainVC.swift */; };
 		4958B0EC1EEBB411002B40EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4958B0EA1EEBB411002B40EF /* Main.storyboard */; };
 		4958B0EF1EEBB411002B40EF /* Jingled.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4958B0ED1EEBB411002B40EF /* Jingled.xcdatamodeld */; };
 		4958B0F11EEBB411002B40EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4958B0F01EEBB411002B40EF /* Assets.xcassets */; };
@@ -16,6 +16,13 @@
 		4958B0FF1EEBB411002B40EF /* JingledTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4958B0FE1EEBB411002B40EF /* JingledTests.swift */; };
 		4958B10A1EEBB411002B40EF /* JingledUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4958B1091EEBB411002B40EF /* JingledUITests.swift */; };
 		4958B11B1EEBB75F002B40EF /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4958B11A1EEBB75F002B40EF /* Drink.swift */; };
+		49A0172D1EEC9CAD00AE2ABD /* DigestionOfDrink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0172C1EEC9CAD00AE2ABD /* DigestionOfDrink.swift */; };
+		49A0172F1EEC9D2500AE2ABD /* BACFromDrink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A0172E1EEC9D2500AE2ABD /* BACFromDrink.swift */; };
+		49C51D2C1EEC4E2B007D9B0F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C51D2B1EEC4E2B007D9B0F /* Person.swift */; };
+		49DAAE991EF6F786002770EB /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DAAE981EF6F786002770EB /* SettingsVC.swift */; };
+		49DAAE9B1EF6FA61002770EB /* AddDrinkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DAAE9A1EF6FA61002770EB /* AddDrinkVC.swift */; };
+		49DAAE9D1EF6FAB8002770EB /* AddFoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DAAE9C1EF6FAB8002770EB /* AddFoodVC.swift */; };
+		49E5F4EC1EEDCED10053BE40 /* CurrentStomachContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E5F4EB1EEDCED10053BE40 /* CurrentStomachContents.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +45,7 @@
 /* Begin PBXFileReference section */
 		4958B0E31EEBB411002B40EF /* Jingled.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jingled.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4958B0E61EEBB411002B40EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4958B0E81EEBB411002B40EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4958B0E81EEBB411002B40EF /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		4958B0EB1EEBB411002B40EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4958B0EE1EEBB411002B40EF /* Jingled.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Jingled.xcdatamodel; sourceTree = "<group>"; };
 		4958B0F01EEBB411002B40EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +58,13 @@
 		4958B1091EEBB411002B40EF /* JingledUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JingledUITests.swift; sourceTree = "<group>"; };
 		4958B10B1EEBB411002B40EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4958B11A1EEBB75F002B40EF /* Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		49A0172C1EEC9CAD00AE2ABD /* DigestionOfDrink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigestionOfDrink.swift; sourceTree = "<group>"; };
+		49A0172E1EEC9D2500AE2ABD /* BACFromDrink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BACFromDrink.swift; sourceTree = "<group>"; };
+		49C51D2B1EEC4E2B007D9B0F /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		49DAAE981EF6F786002770EB /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		49DAAE9A1EF6FA61002770EB /* AddDrinkVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDrinkVC.swift; sourceTree = "<group>"; };
+		49DAAE9C1EF6FAB8002770EB /* AddFoodVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFoodVC.swift; sourceTree = "<group>"; };
+		49E5F4EB1EEDCED10053BE40 /* CurrentStomachContents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentStomachContents.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +149,11 @@
 		4958B1171EEBB717002B40EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				49C51D2B1EEC4E2B007D9B0F /* Person.swift */,
+				49A0172E1EEC9D2500AE2ABD /* BACFromDrink.swift */,
 				4958B11A1EEBB75F002B40EF /* Drink.swift */,
+				49A0172C1EEC9CAD00AE2ABD /* DigestionOfDrink.swift */,
+				49E5F4EB1EEDCED10053BE40 /* CurrentStomachContents.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -150,7 +168,10 @@
 		4958B1191EEBB728002B40EF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4958B0E81EEBB411002B40EF /* ViewController.swift */,
+				4958B0E81EEBB411002B40EF /* MainVC.swift */,
+				49DAAE981EF6F786002770EB /* SettingsVC.swift */,
+				49DAAE9A1EF6FA61002770EB /* AddDrinkVC.swift */,
+				49DAAE9C1EF6FAB8002770EB /* AddFoodVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -292,10 +313,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4958B0E91EEBB411002B40EF /* ViewController.swift in Sources */,
+				49C51D2C1EEC4E2B007D9B0F /* Person.swift in Sources */,
+				4958B0E91EEBB411002B40EF /* MainVC.swift in Sources */,
 				4958B0EF1EEBB411002B40EF /* Jingled.xcdatamodeld in Sources */,
 				4958B11B1EEBB75F002B40EF /* Drink.swift in Sources */,
+				49A0172F1EEC9D2500AE2ABD /* BACFromDrink.swift in Sources */,
+				49DAAE9B1EF6FA61002770EB /* AddDrinkVC.swift in Sources */,
+				49E5F4EC1EEDCED10053BE40 /* CurrentStomachContents.swift in Sources */,
+				49DAAE9D1EF6FAB8002770EB /* AddFoodVC.swift in Sources */,
 				4958B0E71EEBB411002B40EF /* AppDelegate.swift in Sources */,
+				49A0172D1EEC9CAD00AE2ABD /* DigestionOfDrink.swift in Sources */,
+				49DAAE991EF6F786002770EB /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +483,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = PApps.Jingled;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -468,6 +497,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = PApps.Jingled;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -548,6 +578,7 @@
 				4958B1101EEBB412002B40EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4958B1111EEBB412002B40EF /* Build configuration list for PBXNativeTarget "JingledTests" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +587,7 @@
 				4958B1131EEBB412002B40EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4958B1141EEBB412002B40EF /* Build configuration list for PBXNativeTarget "JingledUITests" */ = {
 			isa = XCConfigurationList;
@@ -564,6 +596,7 @@
 				4958B1161EEBB412002B40EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

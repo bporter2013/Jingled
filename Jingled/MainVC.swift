@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+     
         
-        let d1 = Drink(alcoholByVolume: 0.05, volumeOfDrink: 16)
-        print(d1.alcoholMass)
+       
     }
 
     
